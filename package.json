@@ -6,10 +6,14 @@
   "author": "brunosana <brunosa@dcomp.ufs.br>",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "pg": "^8.5.1",
-    "typeorm": "^0.2.31"
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.31",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "build": "tsc",
@@ -17,7 +21,9 @@
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.11",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
     "eslint": "6.8.0",
