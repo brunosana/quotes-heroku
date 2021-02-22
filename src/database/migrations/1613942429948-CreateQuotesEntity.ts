@@ -1,35 +1,29 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export default class createUserEntity1613926149667
+export default class CreateQuotesEntity1613942429948
     implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: 'users',
+                name: 'quotes',
                 columns: [
                     {
                         name: 'id',
-                        type: 'uuid',
+                        type: 'varchar',
                         isPrimary: true,
                         generationStrategy: 'uuid',
                         default: 'uuid_generate_v4()',
                     },
                     {
-                        name: 'username',
+                        name: 'message',
                         type: 'varchar',
                         isUnique: true,
                         isNullable: false,
                     },
                     {
-                        name: 'email',
-                        type: 'varchar',
-                        isUnique: true,
-                        isNullable: false,
-                    },
-                    {
-                        name: 'password',
-                        type: 'varchar',
-                        isNullable: false,
+                        name: 'createdBy',
+                        type: 'uuid',
+                        isNullable: true,
                     },
                     {
                         name: 'createdAt',
@@ -47,6 +41,6 @@ export default class createUserEntity1613926149667
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable('users');
+        await queryRunner.dropTable('quotes');
     }
 }
