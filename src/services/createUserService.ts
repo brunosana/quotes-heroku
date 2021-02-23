@@ -9,7 +9,7 @@ interface Request {
     password: string;
 }
 
-class createUserService {
+class CreateUserService {
     public async execute({
         username,
         email,
@@ -50,4 +50,4 @@ class createUserService {
     }
 }
 
-export default createUserService;
+export default CreateUserService;

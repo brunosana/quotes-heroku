@@ -3,7 +3,7 @@ import { validate } from 'uuid';
 import AppError from '../errors/AppError';
 import User from '../models/User';
 
-class deleteUserService {
+class DeleteUserService {
     public async execute(id: string): Promise<void> {
         if (!id) {
             throw new AppError('Id parameter requider');
@@ -21,4 +21,4 @@ class deleteUserService {
     }
 }
 
-export default deleteUserService;
+export default DeleteUserService;

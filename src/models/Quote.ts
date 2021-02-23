@@ -17,6 +17,12 @@ class Quote {
     @Column()
     message: string;
 
+    @Column()
+    author: string;
+
+    @Column()
+    createdBy: string;
+
     @ManyToOne(() => User)
     @JoinColumn({ name: 'createdBy', referencedColumnName: 'id' })
     user: User;

@@ -3,7 +3,7 @@ import { getRepository } from 'typeorm';
 import AppError from '../errors/AppError';
 import User from '../models/User';
 
-class getUserService {
+class GetUserService {
     public async execute(id: string): Promise<User> {
         if (!id) {
             throw new AppError('Id paramteter required');
@@ -24,4 +24,4 @@ class getUserService {
     }
 }
 
-export default getUserService;
+export default GetUserService;

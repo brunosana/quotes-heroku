@@ -21,6 +21,11 @@ export default class CreateQuotesEntity1613942429948
                         isNullable: false,
                     },
                     {
+                        name: 'author',
+                        type: 'varchar',
+                        isNullable: false,
+                    },
+                    {
                         name: 'createdBy',
                         type: 'uuid',
                         isNullable: true,
