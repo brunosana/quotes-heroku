@@ -13,13 +13,15 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.5.1",
     "reflect-metadata": "^0.1.13",
+    "ts-node": "^9.1.1",
     "typeorm": "^0.2.31",
     "uuid": "^8.3.2"
   },
   "scripts": {
     "build": "tsc",
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "start": "ts-node src/server.ts"
   },
   "engines": {
     "node": "14.15.X"
